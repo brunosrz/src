@@ -5,11 +5,13 @@ Documentação, correções e novos exercícios são bem-vindos.
 
 ## Fluxo de trabalho
 
-1. Abra uma issue para uma proposta ampla; correções pequenas podem ir direto a um PR.
+1. Abra uma issue para uma proposta ampla, descrevendo objetivo, restrições e critérios de
+   aceitação; correções pequenas podem ir direto a um PR.
 2. Sincronize `main` e crie uma branch curta: `feat/pub-sub`, `docs/cache` ou `fix/example-timeout`.
 3. Faça um estudo por PR, seguindo o [modelo](docs/example-template.md).
 4. Execute os checks e registre os comandos e resultados no PR.
-5. Resolva a revisão; o mantenedor faz squash merge quando os checks passarem.
+5. Resolva a revisão, confira o diff completo e execute validações manuais aplicáveis; o mantenedor
+   faz squash merge quando os checks passarem.
 
 Títulos de PR e commits seguem `tipo(escopo): descrição`. Exemplos:
 `feat(go): demonstrate bounded worker pool`, `docs(cache): explain invalidation trade-offs`. Tipos
@@ -67,3 +69,13 @@ terceiros sem permissão.
 
 Reporte problemas com reprodução mínima. Para vulnerabilidades que exponham credenciais ou dados,
 use o canal privado disponível no GitHub; não publique o segredo na issue.
+
+## Evidências e decisões
+
+O PR deve permitir que outra pessoa confirme a conclusão sem confiar em uma afirmação. Registre os
+critérios atendidos, comandos executados e resultados reais, além de riscos ou pendências. Se algo
+não pôde ser executado, explique o motivo.
+
+Use [ADRs](docs/adr/README.md) para decisões que mudem arquitetura, contratos, persistência,
+concorrência ou operação. Uma revisão automatizada pode encontrar problemas, mas a aprovação deve
+considerar o diff, os critérios de aceitação e o comportamento observado.

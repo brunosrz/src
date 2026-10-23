@@ -20,6 +20,7 @@ body:
     id: expected
     attributes:
       label: Resultado esperado e critérios de conclusão
+      description: Descreva o comportamento correto e como confirmar a correção.
     validations:
       required: true
   - type: textarea

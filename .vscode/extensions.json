@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "charliermarsh.ruff",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "tamasfe.even-better-toml",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "usernamehw.errorlens",
+    "github.vscode-github-actions",
+    "github.vscode-pull-request-github",
+    "vadimcn.vscode-lldb",
+    "rust-lang.rust-analyzer",
+    "golang.go",
+    "llvm-vs-code-extensions.vscode-clangd",
+    "twxs.cmake"
+  ],
+  "unwantedRecommendations": ["ms-vscode.vscode-typescript-next"]
+}

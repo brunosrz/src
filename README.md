@@ -67,6 +67,11 @@ Issues descrevem problemas ou objetivos de aprendizagem. PRs usam Conventional C
 explicações. O CI verifica ferramentas compartilhadas e descobre estudos com manifestos; pastas
 vazias não contam como projetos testados.
 
+O processo mantém o desenvolvedor no controle: cada tarefa começa com critérios observáveis, cada
+mudança passa por diff e testes, e cada entrega declara evidências reais e limitações. A IA pode
+acelerar exploração e implementação, mas decisões, revisão e aprovação continuam sendo
+responsabilidades humanas.
+
 Consulte [CONTRIBUTING.md](CONTRIBUTING.md), [AGENTS.md](AGENTS.md) e
 [configuração do GitHub](docs/github-setup.md). CodeRabbit e Vectora Bot dependem de instalação
 externa; seus arquivos de configuração não comprovam que estejam ativos.

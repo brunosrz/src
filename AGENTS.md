@@ -29,6 +29,11 @@ implementado.
   relevantes.
 - Exemplos deliberadamente inseguros precisam de isolamento, explicação e exceções de lint locais
   justificadas.
+- Antes de implementar uma tarefa, registre critérios de aceitação verificáveis. A implementação
+  deve atender ao objetivo atual e evitar refatorações sem relação.
+- Testes devem cobrir comportamento esperado, entradas inválidas, falhas externas e regressões.
+- Nunca remova testes, enfraqueça asserções, desative hooks ou suprima lint/tipos só para obter um
+  pipeline verde. Relate falhas e limitações com precisão.
 
 ## Dependências e verificações
 
@@ -70,6 +75,8 @@ agentes usam `codex/<assunto>`; não use worktrees.
 - Depois de mudanças recebidas, repita os testes relevantes. Nunca force push.
 - Envie commits antes de trocar de branch. Não faça merge de PR sem autorização.
 - Nunca desative hooks para conseguir commitar.
+- Cada entrega deve informar arquivos alterados, decisões, comandos realmente executados, resultados
+  e pontos que ainda exigem revisão humana. A automação apoia a revisão; não substitui a aprovação.
 
 ## Documentação e segurança
 
@@ -83,3 +90,7 @@ autorização do usuário. Não versione segredos nem dados pessoais.
 Workflows de PR executam código sem secrets e com permissões mínimas. Workflows privilegiados de
 metadados nunca fazem checkout ou executam código do PR. Mantenha Actions fixadas por SHA e versões
 de ferramentas reproduzíveis.
+
+Decisões que afetem arquitetura, contratos ou operação devem ter um registro em `docs/adr/`, usando
+o modelo disponível. A documentação deve acompanhar mudanças de comportamento, e testes manuais ou
+de integração devem ser identificados quando o CI não puder observar a experiência completa.

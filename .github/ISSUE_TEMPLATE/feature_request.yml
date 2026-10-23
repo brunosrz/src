@@ -20,6 +20,8 @@ body:
     id: expected
     attributes:
       label: Resultado esperado e critérios de conclusão
+      description:
+        Escreva comportamentos que possam ser verificados por teste ou demonstração manual.
     validations:
       required: true
   - type: textarea
