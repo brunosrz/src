@@ -1,0 +1,55 @@
+"ci":
+  - changed-files:
+      - any-glob-to-any-file: [".github/**"]
+"tooling":
+  - changed-files:
+      - any-glob-to-any-file:
+          ["utils/**", "tests/**", "pyproject.toml", "uv.lock", ".pre-commit-config.yaml"]
+"documentation":
+  - changed-files:
+      - any-glob-to-any-file: ["**/*.md"]
+"lang:python":
+  - changed-files:
+      - any-glob-to-any-file: ["python/**"]
+"lang:go":
+  - changed-files:
+      - any-glob-to-any-file: ["go/**"]
+"lang:cpp":
+  - changed-files:
+      - any-glob-to-any-file: ["cpp/**"]
+"lang:ts":
+  - changed-files:
+      - any-glob-to-any-file: ["ts/**"]
+"lang:rust":
+  - changed-files:
+      - any-glob-to-any-file: ["rust/**"]
+"topic:databases":
+  - changed-files:
+      - any-glob-to-any-file: ["topics/databases/**", "*/databases/**"]
+"topic:messaging":
+  - changed-files:
+      - any-glob-to-any-file: ["topics/messaging/**", "*/messaging/**"]
+"topic:distributed-systems":
+  - changed-files:
+      - any-glob-to-any-file: ["topics/distributed-systems/**", "*/distributed-systems/**"]
+"topic:security":
+  - changed-files:
+      - any-glob-to-any-file: ["topics/security/**", "*/security/**"]
+"topic:testing":
+  - changed-files:
+      - any-glob-to-any-file: ["topics/testing/**", "*/testing/**"]
+"topic:observability":
+  - changed-files:
+      - any-glob-to-any-file: ["topics/observability/**", "*/observability/**"]
+"topic:algorithms":
+  - changed-files:
+      - any-glob-to-any-file: ["topics/algorithms/**", "*/algorithms/**"]
+"topic:networking":
+  - changed-files:
+      - any-glob-to-any-file: ["topics/networking/**", "*/networking/**"]
+"topic:cache":
+  - changed-files:
+      - any-glob-to-any-file: ["topics/cache/**", "*/cache/**"]
+"topic:architecture":
+  - changed-files:
+      - any-glob-to-any-file: ["topics/architecture/**", "*/architecture/**"]

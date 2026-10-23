@@ -1,0 +1,73 @@
+minimum_pre_commit_version: "4.3.0"
+default_stages: [pre-commit]
+default_install_hook_types: [pre-commit, commit-msg]
+exclude: '(^|/)(node_modules|\.venv|build|dist|target|coverage)/'
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: [--maxkb=1000]
+      - id: detect-private-key
+  - repo: local
+    hooks:
+      - id: uv-lock
+        name: Root lockfile
+        entry: uv lock --check
+        language: system
+        files: ^(pyproject\.toml|uv\.lock)$
+        pass_filenames: false
+      - id: ruff
+        name: Ruff
+        entry: uv run --locked ruff check --fix
+        language: system
+        types: [python]
+      - id: ruff-format
+        name: Ruff format
+        entry: uv run --locked ruff format
+        language: system
+        types: [python]
+      - id: ty
+        name: Tooling types
+        entry: uv run --locked ty check utils tests
+        language: system
+        files: ^(utils|tests)/.*\.py$
+        pass_filenames: false
+      - id: bandit
+        name: Python security
+        entry: uv run --locked python -m bandit -q
+        language: system
+        types: [python]
+        exclude: (^|/)(tests/|test_[^/]+\.py$)
+      - id: documentation-links
+        name: Local Markdown links
+        entry: uv run --locked python -m utils.check_links
+        language: system
+        types: [markdown]
+      - id: conventional-commit
+        name: Conventional Commit
+        entry: uv run --locked python -m utils.check_commit
+        language: system
+        stages: [commit-msg]
+      - id: projects
+        name: Study project checks
+        entry: uv run --locked python -m utils.projects check
+        language: system
+        files: ^(python|go|cpp|ts|rust)/.*\.(py|toml|lock|go|mod|sum|rs|ts|tsx|json|cpp|cc|cxx|h|hpp|txt)$
+        pass_filenames: false
+      - id: prettier
+        name: Prettier
+        entry: prettier --write
+        language: node
+        additional_dependencies: [prettier@3.9.5]
+        types_or: [markdown, json, yaml, javascript, ts, tsx, css]
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.12
+    hooks:
+      - id: actionlint

@@ -1,0 +1,142 @@
+[
+  {
+    "name": "bug",
+    "color": "d73a4a",
+    "description": "Erro reproduzível em estudo ou ferramenta"
+  },
+  {
+    "name": "enhancement",
+    "color": "a2eeef",
+    "description": "Melhoria de um estudo existente"
+  },
+  {
+    "name": "study",
+    "color": "0e8a16",
+    "description": "Novo estudo ou experimento"
+  },
+  {
+    "name": "documentation",
+    "color": "0075ca",
+    "description": "Documentação e explicações"
+  },
+  {
+    "name": "needs-triage",
+    "color": "ededed",
+    "description": "Aguardando avaliação"
+  },
+  {
+    "name": "good first issue",
+    "color": "7057ff",
+    "description": "Tarefa adequada para primeira contribuição"
+  },
+  {
+    "name": "help wanted",
+    "color": "008672",
+    "description": "Contribuições são bem-vindas"
+  },
+  {
+    "name": "dependencies",
+    "color": "0366d6",
+    "description": "Atualização de dependências"
+  },
+  {
+    "name": "ci",
+    "color": "1d76db",
+    "description": "GitHub Actions e automação"
+  },
+  {
+    "name": "tooling",
+    "color": "5319e7",
+    "description": "Ferramentas compartilhadas"
+  },
+  {
+    "name": "vectora",
+    "color": "6f42c1",
+    "description": "Solicita revisão do Vectora Bot"
+  },
+  {
+    "name": "autorelease: pending",
+    "color": "fbca04",
+    "description": "Release em preparação"
+  },
+  {
+    "name": "autorelease: tagged",
+    "color": "0e8a16",
+    "description": "Release publicada"
+  },
+  {
+    "name": "lang:python",
+    "color": "bfdadc",
+    "description": "Estudos de python"
+  },
+  {
+    "name": "lang:go",
+    "color": "bfdadc",
+    "description": "Estudos de go"
+  },
+  {
+    "name": "lang:cpp",
+    "color": "bfdadc",
+    "description": "Estudos de cpp"
+  },
+  {
+    "name": "lang:ts",
+    "color": "bfdadc",
+    "description": "Estudos de ts"
+  },
+  {
+    "name": "lang:rust",
+    "color": "bfdadc",
+    "description": "Estudos de rust"
+  },
+  {
+    "name": "topic:databases",
+    "color": "d4c5f9",
+    "description": "Tema: databases"
+  },
+  {
+    "name": "topic:messaging",
+    "color": "d4c5f9",
+    "description": "Tema: messaging"
+  },
+  {
+    "name": "topic:distributed-systems",
+    "color": "d4c5f9",
+    "description": "Tema: distributed-systems"
+  },
+  {
+    "name": "topic:security",
+    "color": "d4c5f9",
+    "description": "Tema: security"
+  },
+  {
+    "name": "topic:testing",
+    "color": "d4c5f9",
+    "description": "Tema: testing"
+  },
+  {
+    "name": "topic:observability",
+    "color": "d4c5f9",
+    "description": "Tema: observability"
+  },
+  {
+    "name": "topic:algorithms",
+    "color": "d4c5f9",
+    "description": "Tema: algorithms"
+  },
+  {
+    "name": "topic:networking",
+    "color": "d4c5f9",
+    "description": "Tema: networking"
+  },
+  {
+    "name": "topic:cache",
+    "color": "d4c5f9",
+    "description": "Tema: cache"
+  },
+  {
+    "name": "topic:architecture",
+    "color": "d4c5f9",
+    "description": "Tema: architecture"
+  }
+]

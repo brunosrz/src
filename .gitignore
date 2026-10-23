@@ -1,0 +1,75 @@
+# Credenciais e configuração local
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+.dev.vars*
+.vercel/
+.codex/
+.claude/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+.tox/
+.coverage*
+htmlcov/
+
+# JavaScript / TypeScript
+node_modules/
+.npm/
+.pnpm-store/
+*.tsbuildinfo
+.next/
+.nuxt/
+
+# Compilação e testes
+build/
+dist/
+target/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+compile_commands.json
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.pdb
+*.test
+coverage/
+coverage.xml
+*.prof
+*.out
+
+# Estado local; fixtures e arquivos SQL continuam versionáveis
+.local/
+*.db-journal
+*.sqlite-journal
+*.log
+*.tmp
+*.bak
+.ipynb_checkpoints/
+
+# Editores e sistema
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.DS_Store
+Thumbs.db
+*~

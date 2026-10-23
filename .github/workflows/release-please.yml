@@ -1,0 +1,44 @@
+name: Release Please
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: release-please-main
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: googleapis/release-please-action@8b8fd2cc23b2e18957157a9d923d75aa0c6f6ad5 # v4
+        with:
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+      # GITHUB_TOKEN-created PRs do not trigger pull_request workflows.
+      # workflow_dispatch explicitly starts read-only checks at the release head.
+      - name: Check release PR
+        uses: actions/github-script@d746ffe35508b1917358783b479e04febd2b8f71 # v9.0.0
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const pulls = await github.paginate(github.rest.pulls.list, {
+              owner, repo, state: 'open', base: 'main'
+            });
+            for (const pr of pulls) {
+              if (pr.head.repo?.full_name !== context.payload.repository.full_name ||
+                  pr.user.login !== 'github-actions[bot]' ||
+                  !pr.head.ref.startsWith('release-please--') ||
+                  !pr.labels.some(label => label.name === 'autorelease: pending')) continue;
+              await github.rest.actions.createWorkflowDispatch({
+                owner, repo, workflow_id: 'pr-checks.yml', ref: pr.head.ref
+              });
+            }

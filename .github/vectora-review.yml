@@ -1,0 +1,11 @@
+# Reaproveitado da configuração original; requer o GitHub App instalado.
+version: 1
+review:
+  enabled: true
+  trigger: on_request
+  trigger_label: vectora
+  style: balanced
+fix_ci:
+  enabled: false
+  trigger_comment: "@vectora fix-ci"
+  allow_workflow_file_changes: false
